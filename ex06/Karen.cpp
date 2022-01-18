@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 17:40:32 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/18 18:27:28 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/18 18:31:23 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,19 @@ void	Karen::error( void )
 	std::cout << "\n";
 }
 
-void	Karen::complain(int	level)
+void	Karen::complain(std::string	level)
 {
-	switch (level)
+	int			i;
+	std::string moods[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+
+	i = 0;
+	while (i < 4)
+	{
+		if (moods[i] == level)
+			break ;
+		i++;
+	}
+	switch (i)
 	{
 		case 0:
 			this->debug();
@@ -56,5 +66,9 @@ void	Karen::complain(int	level)
 			this->warning();
 		case 3:
 			this->error();
+			break ;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << "\n";
+			break ;
 	}
 }
