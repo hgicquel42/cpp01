@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:07:15 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/18 15:30:14 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/18 16:00:54 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ class Zombie
 	private:
 		std::string	name;
 	public:
+		Zombie(void);
 		Zombie(std::string name);
 		~Zombie(void);
 		void	announce(void);
+		void	rename(std::string name);
 };

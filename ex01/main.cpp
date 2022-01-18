@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/18 13:07:15 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/18 15:30:14 by hgicquel         ###   ########.fr       */
+/*   Created: 2022/01/18 15:32:07 by hgicquel          #+#    #+#             */
+/*   Updated: 2022/01/18 15:57:47 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Zombie.hpp"
 #include <iostream>
 
-class Zombie
+Zombie* zombieHorde(int n, std::string name);
+
+int	main(void)
 {
-	private:
-		std::string	name;
-	public:
-		Zombie(std::string name);
-		~Zombie(void);
-		void	announce(void);
-};
+	int		i;
+	int		n;
+	Zombie *p;
+
+	n = 10;
+	p = zombieHorde(n, "Zombar");
+	i = 0;
+	while (i < n)
+		p[i++].announce();
+	delete[] p;
+}
