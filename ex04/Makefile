@@ -1,10 +1,8 @@
-NAME = humans
+NAME = replace
 
 INPUT = \
 	main.cpp \
-	Weapon.cpp \
-	HumanA.cpp \
-	HumanB.cpp \
+
 
 OUTPUT = ${INPUT:.cpp=.o}
 
@@ -25,4 +23,4 @@ fclean:	clean
 re:		fclean all
 
 test: $(NAME)
-	./${NAME}
+	./${NAME} lorem.txt ipsum lol

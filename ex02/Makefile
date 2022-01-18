@@ -1,4 +1,4 @@
-NAME = zombies
+NAME = brain
 
 INPUT = main.cpp
 
