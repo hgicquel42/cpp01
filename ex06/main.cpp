@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:01:51 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/18 18:31:55 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 12:05:51 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int	main(int argc, char **argv)
 
 	if (argc != 2)
 		return (1);
-	karen.complain(argv[1]);
+	karen.filter(argv[1]);
 	return (0);
 }

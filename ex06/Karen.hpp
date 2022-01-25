@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 17:36:01 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/18 18:30:33 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 12:05:41 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ class Karen
 		void	error(void);
 	public:
 		void	complain(std::string level);
+		void	filter(std::string level);
 };

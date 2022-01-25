@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 17:40:32 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/18 18:31:23 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 12:05:28 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,30 @@ void	Karen::error( void )
 	std::cout << "\n";
 }
 
-void	Karen::complain(std::string	level)
+void	Karen::complain(std::string level)
 {
-	int			i;
-	std::string moods[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+	int	i;
+	std::string levels[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+	void (Karen::*methods[])(void) = { &Karen::debug, &Karen::info, &Karen::warning, &Karen::error };
 
 	i = 0;
 	while (i < 4)
 	{
-		if (moods[i] == level)
+		if (levels[i] == level)
+			return (this->*methods[i])();
+		i++;
+	}
+}
+
+void	Karen::filter(std::string level)
+{
+	int			i;
+	std::string levels[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+
+	i = 0;
+	while (i < 4)
+	{
+		if (levels[i] == level)
 			break ;
 		i++;
 	}
