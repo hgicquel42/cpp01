@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 17:01:47 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 12:00:42 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 18:33:51 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ int	main(int argc, char **argv)
 		return (1);
 	ifname = argv[1];
 	ofname = ifname + ".replace";
-	ifstream = std::ifstream(ifname);
-	ofstream = std::ofstream(ofname);
+	ifstream.open(ifname.c_str());
+	ofstream.open(ofname.c_str());
 	while (std::getline(ifstream, line))
 	{
 		ft_replace(line, argv[2], argv[3]);
