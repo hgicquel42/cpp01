@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 17:01:47 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/18 17:32:12 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 12:00:42 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_replace(std::string& line, std::string src, std::string dst)
 {
 	int	i;
 	int	l;
-
 
 	i = 0;
 	l = src.length();
